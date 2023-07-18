@@ -33,7 +33,6 @@ class NowPlayingComponent extends StatelessWidget {
                     viewportFraction: 1.0,
                     autoPlay: true,
                     enableInfiniteScroll: true,
-                    onPageChanged: (index, reason) {},
                   ),
                   items: state.nowPlaying.map(
                     (item) {
