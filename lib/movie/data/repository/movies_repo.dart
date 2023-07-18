@@ -13,7 +13,7 @@ class MoviesRepo extends BaseMovieRepo {
   Future<Either<Failure, List<Movie>>> getNowPlayingMovies() async {
     final result = await baseMovieRemoteDataSource.getNowPlayingMovies();
     try {
-      return result;
+      return Right(result);
     } on ServerException catch (error) {
       return Left(ServerFailure(error.errorModel.statusMessages));
     }
@@ -23,7 +23,7 @@ class MoviesRepo extends BaseMovieRepo {
   Future<Either<Failure, List<Movie>>> getPopularMovies() async {
     final result = await baseMovieRemoteDataSource.getPopularMovies();
     try {
-      return result;
+      return Right(result);
     } on ServerException catch (error) {
       return Left(ServerFailure(error.errorModel.statusMessages));
     }
@@ -33,7 +33,7 @@ class MoviesRepo extends BaseMovieRepo {
   Future<Either<Failure, List<Movie>>> getTopRatedMovies() async {
     final result = await baseMovieRemoteDataSource.getNowPlayingMovies();
     try {
-      return result;
+      return Right(result);
     } on ServerException catch (error) {
       return Left(ServerFailure(error.errorModel.statusMessages));
     }

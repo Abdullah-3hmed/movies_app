@@ -14,7 +14,7 @@ class MovieModel extends Movie {
         id: json["id"],
         title: json["title"],
         backdropPath: json["backdrop_path"],
-        genreIds: List<int>.from(json["genreIds"]),
+        genreIds: List<int>.from(json["genre_ids"]),
         overview: json["overview"],
         voteAverage: json["vote_average"],
         releaseDate: json["release_date"],

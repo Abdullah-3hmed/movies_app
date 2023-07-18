@@ -3,11 +3,11 @@ import 'package:movies_app/core/error/failure.dart';
 import 'package:movies_app/movie/domain/entities/movie.dart';
 import 'package:movies_app/movie/domain/repository/base_movie_repo.dart';
 
-class GetTopRatedMovies {
+class GetNowPlayingMoviesUseCase {
   final BaseMovieRepo baseMovieRepo;
 
-  GetTopRatedMovies(this.baseMovieRepo);
+  GetNowPlayingMoviesUseCase(this.baseMovieRepo);
   Future<Either<Failure, List<Movie>>> execute() async {
-    return await baseMovieRepo.getTopRatedMovies();
+    return await baseMovieRepo.getNowPlayingMovies();
   }
 }
